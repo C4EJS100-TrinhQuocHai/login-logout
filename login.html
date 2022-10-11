@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1));
+        width: 280px;
+        margin: 50px auto;
+        height: 400px;
+        box-sizing: border-box;
+        padding-top: 100px;
+        padding-left: 60px;
+        border-radius: 5px;
+        color: black;
+        position: relative;
+    }
+
+    .container input {
+        margin: 5px 0px;
+        width: 128px;
+        height: 12px;
+        outline: none;
+        padding: 5px;
+        border-radius: 5px;
+        border: none;
+    }
+
+    .container button {
+        position: absolute;
+        display: block;
+        margin: 0 auto;
+        left: 100px;
+        height: 35px;
+        background-color: antiquewhite;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+        box-shadow: 1px 1px 3px 3px tomato;
+    }
+
+    .body {
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+    }
+
+    .body i {
+        position: absolute;
+        left: 175px;
+        margin-top: 8px;
+        cursor: pointer;
+    }
+    .container button:hover {
+        cursor: pointer;
+        background-image: linear-gradient(to right, red,yellow);
+        outline: none;
+    }
+    .noAcount {
+        position: relative;
+        top: 80px;
+        left: -30px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="body">
+            <label for="">Tên đăng nhập</label><br>
+            <input id='username' type="text" placeholder="Username">
+            <span class="errorUserName" id="errorUserName" style="display: none">Username sai dinh dang</span><br>
+
+            <label for="password">Mật khẩu </label> <br>
+            <i id="icon" onclick="showPassword()" class="fa-solid fa-eye"></i>
+            <input id="password" type="password" placeholder="Password"> <br>
+            <span class="error" id="error" style="display: none">Password sai định dạng</span>
+            <button id="button" onclick="register()"> Đăng nhập </button>
+            <div class="noAcount">
+                Bạn chưa có tài khoản. <a href="/index.html">Đăng ký</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
